@@ -12,17 +12,17 @@ authors = [
 dependencies = [
     "opencv-python>=4.8.0",
     "numpy>=1.24.0",
-    "pillow>=10.0.0",
+    "pillow>=13.0.0",
     "scikit-image>=0.21.0",
     "psutil>=5.9.0",
 ]
-requires-python = ">=3.8"
+requires-python = ">=3.10"
 
 [project.optional-dependencies]
 dev = [
-    "pytest>=7.0.0",
+    "pytest>=9.0.3",
     "pytest-cov>=4.0.0",
-    "black>=23.0.0",
+    "black>=26.3.1",
     "isort>=5.12.0",
     "mypy>=1.0.0",
 ]
@@ -35,19 +35,19 @@ packages = ["src/slide_capture"]
 
 [tool.black]
 line-length = 88
-target-version = ['py38']
+target-version = ['py310']
 
 [tool.isort]
 profile = "black"
 line_length = 88
 
 [tool.mypy]
-python_version = "3.8"
+python_version = "3.10"
 warn_return_any = true
 warn_unused_configs = true
 disallow_untyped_defs = true
 
 [dependency-groups]
 dev = [
-    "pytest>=8.3.5",
+    "pytest>=9.0.3",
 ]
